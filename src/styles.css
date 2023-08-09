@@ -8,13 +8,13 @@
   }
   body {
     background-color: #eee;
-    padding: 0 16px;
+    /* padding: 0 16px; */
     background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
   }
   header {
     background-color: #f5ba13;
     padding: 16px 32px;
-    margin: auto -16px;
+    /* margin: auto -16px; */
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   }
 
@@ -87,7 +87,6 @@
   }
   .note {
     width: 240px;
-    margin: 16px;
     background-color: #fff;
     box-shadow: 0 1px 5px rgb(138, 137, 137);
     padding: 10px;
@@ -222,7 +221,7 @@
 
   @media screen and (min-width: 601px) and (max-width: 800px) {
     header{
-      margin: auto -30px;
+      /* margin: auto -30px; */
     }
     .container{
       top: 69px;
@@ -268,7 +267,7 @@
 
   @media screen and (min-width: 401px) and (max-width: 600px){
     header{
-      margin: auto -50px;
+      /* margin: auto -50px; */
     }
     header h1{
       position: relative;
@@ -343,7 +342,7 @@
   @media screen and (max-width: 400px) {
     header{
       width: 480px;
-      margin: auto -50px;
+      /* margin: auto -50px; */
     }
     header h1{
       position: relative;
@@ -357,7 +356,7 @@
       height: 45px;
     }
     .container{
-      right: 155px;
+      right: -5px;
       top: 43px;
     }
     .user-btn{
@@ -382,7 +381,8 @@
     }
 
     .note{
-      width: 190px;
+      width: 160px;
+      
     }
     .note h1{
       font-size: 1em;
@@ -390,14 +390,12 @@
     .note p{
       font-size: 0.95em;
     }
-    .container{
-      right: 105px;
-    }
+    
     .icon-btn{
       top: -23%;
     }
     footer{
-      bottom: -70px;
+      bottom: -140px;
     }
 
     .over-lay .edit-window h1{
@@ -407,7 +405,7 @@
       left: 20%;
       top: 18%;
       width: 62%;
-      height: 48%;
+      height: 35%;
     }
   }
 
