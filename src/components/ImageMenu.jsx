@@ -27,19 +27,19 @@ const ImageMenu = () => {
             <li>
               <button className="user-btn">
                 {" "}
-                <SettingsIcon className="icon" /> <p>Settings</p>{" "}
+                <SettingsIcon className="icon-btn" /> <p>Settings</p>{" "}
               </button>
             </li>
             <li>
               <button className="user-btn">
                 {" "}
-                <DarkModeIcon className="icon" /> <p>Dark Mode</p>{" "}
+                <DarkModeIcon className="icon-btn" /> <p>Dark Mode</p>{" "}
               </button>
             </li>
             <li>
               <button className="user-btn">
                 {" "}
-                <LogoutIcon className="icon" /> <p>Logout</p>{" "}
+                <LogoutIcon className="icon-btn" /> <p>Logout</p>{" "}
               </button>
             </li>
           </ul>
