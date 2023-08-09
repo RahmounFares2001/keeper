@@ -5,7 +5,7 @@ import "./styles.css";
 
 createRoot(document.getElementById("root")).render(
   <div>
-    <App />dsf
+    <App />
   </div>
 );
 
