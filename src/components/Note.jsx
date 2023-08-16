@@ -16,11 +16,11 @@ function Note(props) {
     <div className="note">
       <h1>{props.title}</h1>
       <p>{props.content}</p>
-      <button onClick={handleDelete}>
-        <DeleteIcon />
+      <button className="note-del-btn" onClick={handleDelete}>
+        <DeleteIcon className="note-icon" />
       </button>
-      <button onClick={handleEdit}>
-        <EditIcon />
+      <button className="note-ed-btn"  onClick={handleEdit}>
+        <EditIcon className="note-icon" />
       </button>
     </div>
   );
