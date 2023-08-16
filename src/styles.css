@@ -13,6 +13,7 @@
   }
   header {
     background-color: #f5ba13;
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
     padding: 16px 32px;
     /* margin: auto -16px; */
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
@@ -109,6 +110,7 @@
     color: #f5ba13;
     position: relative;
     margin-right: 10px;
+    left: 5%;
     width: 36px;
     height: 36px;
     cursor: pointer;
@@ -116,8 +118,11 @@
     float: right;
     border-radius: 5px;
   }
-  .note button:hover {
-    background-color: #946f0825;
+  .note .note-del-btn:hover {
+    background-color: rgba(167, 6, 6, 0.705);
+  }
+  .note .note-ed-btn:hover {
+    background-color: rgba(107, 104, 104, 0.705);
   }
   
   .create-note {
@@ -166,6 +171,7 @@
   
   .over-lay .edit-window {
     background-color: #ca9b18;
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
     width: 44%;
     height: 55%;
     position: absolute;
@@ -176,9 +182,11 @@
   }
   
   .over-lay .edit-window .edit-note {
+    bottom: 5%;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
     position: relative;
-    width: 80%;
+    width: 75%;
+    height: 50%;
     background-color: #fff;
     box-shadow: 0 1px 5px rgb(138, 137, 137);
     padding: 15px;
@@ -197,6 +205,7 @@
     font-size: 1.2em;
   }
   .over-lay .edit-window .edit-btn {
+    top: -5%;
     width: 15%;
     height: 10%;
     position: relative;
@@ -204,10 +213,10 @@
     border: rgb(0, 0, 0) solid 1px;
   }
   .over-lay .edit-window .edit:hover {
-    background-color: #ca9b18;
+    background-color: #034706b7;
   }
   .over-lay .edit-window .close:hover {
-    background-color: rgb(148, 18, 18);
+    background-color: rgba(148, 18, 18, 0.582);
   }
   
   .over-lay .edit-window h1 {
@@ -220,9 +229,9 @@
 
 
   @media screen and (min-width: 601px) and (max-width: 800px) {
-    header{
-      /* margin: auto -30px; */
-    }
+    /* header{
+      margin: auto -30px;
+    } */
     .container{
       top: 69px;
       right: 2px;
@@ -246,19 +255,40 @@
       width: 450px;
       padding: 13px;
     }
+    .create-note .add-btn{
+      width: 35px;
+      height: 35px;
+    }
+    .create-note .add{
+      font-size: 1.6em;
+    }
+
     .note{
       width: 220px;
       padding: 8px;
     }
+    .note .note-icon{
+      font-size: 1.7em;
+    }
+    .note button {
+      width: 33px;
+      height: 33px;
+    }
+    .over-lay .edit-window{
+      height: 50%;
+    }
     .over-lay .edit-window h1{
-      font-size: 1.4em;
+      font-size: 1.6em;
+    }
+    .over-lay .edit-window .edit-note input,
+    .over-lay .edit-window .edit-note textarea{
+      font-size: 1em;
+    }
+    .over-lay .edit-window .edit-btn .icon{
+      font-size: 1.7em;
     }
 
-    
-      .over-lay .edit-window .edit-note input,
-      .over-lay .edit-window .edit-note textarea{
-      font-size: 1.05em;
-    }
+
     footer{
       font-size: 0.9em;
     }
@@ -266,9 +296,9 @@
   }
 
   @media screen and (min-width: 401px) and (max-width: 600px){
-    header{
-      /* margin: auto -50px; */
-    }
+    /* header{
+      margin: auto -50px;
+    } */
     header h1{
       position: relative;
       left: 30px;
@@ -287,8 +317,9 @@
     p{
       font-size: 1em;
     }
-    .icon-btn{
-      top: -5%;
+    .container .icon-btn{
+      font-size: 1.5em;
+      top: -1%;
       
     }
     .container{
@@ -307,6 +338,14 @@
       font-size: 1.05em;
     }
 
+    .create-note .add-btn{
+      width: 30px;
+      height: 30px;
+    }
+    .create-note .add{
+      font-size: 1.4em;
+    }
+
     .note{
       width: 200px;
       padding: 4px;
@@ -321,42 +360,64 @@
       font: 1em;
 
     }
-    .note button{
-      width: 30px;
+
+    .note .note-icon{
+      font-size: 1.4em;
     }
+    .note button {
+      width: 30px;
+      height: 30px;
+    }
+
     footer{
       bottom: 0px;
     }
 
+    /* .over-lay .edit-window{
+      width: 38%;
+      height: 47%;
+    } */
+
     .over-lay .edit-window h1{
       font-size: 1.3em;
     }
+
+    .over-lay .edit-window .edit-note input,
+  .over-lay .edit-window .edit-note textarea{
+    padding: 2px;
+    font-size: 1em;
+  }
+
+
     .over-lay .edit-window{
-      left: 20%;
-      width: 60%;
-      height: 50%;
+      width: 52%;
+      height: 45%;
+    }
+    .over-lay .edit-window .edit-btn .icon{
+      font-size: 1.5em;
     }
 
   }
 
-  @media screen and (max-width: 400px) {
-    header{
+  @media screen and (min-width: 301px) and (max-width: 400px) {
+    /* header{
       width: 480px;
-      /* margin: auto -50px; */
-    }
+      width: 350px;
+      margin: auto -50px;
+    } */
     header h1{
       position: relative;
-      left: 20px;
+      left: -10px;
       font-size: 1.5em;
     }
     .user-img{
-      right: 16px;
+      right: -15px;
       top: -15%;
       width: 45px;
       height: 45px;
     }
     .container{
-      right: -5px;
+      right: -35px;
       top: 43px;
     }
     .user-btn{
@@ -367,17 +428,25 @@
       font-size: 0.8em;
       top: 5%;
     }
-    .icon-btn{
-      font-size: 0.2rem;
+    .container .icon-btn{
+      font-size: 1rem;
+      top: 2%;
     }
     .create-note{
-      width: 300px;
-      left: 16%;
+      width: 250px;
+      /* left: 1%; */
     }
     .create-note input, .create-note textarea{
       padding-left: 4px;
       padding-top: 0px;
       font-size: 1em;
+    }
+    .create-note .add-btn{
+      width: 25px;
+      height: 25px;
+    }
+    .create-note .add{
+      font-size: 1.3em;
     }
 
     .note{
@@ -390,6 +459,15 @@
     .note p{
       font-size: 0.95em;
     }
+    .note .note-icon{
+      font-size: 1.25em;
+    }
+    .note button {
+      width: 28px;
+      height: 28px;
+  
+    }
+
     
     .icon-btn{
       top: -23%;
@@ -398,16 +476,129 @@
       bottom: -140px;
     }
 
+ 
+
     .over-lay .edit-window h1{
-      font-size: 1.3em;
+      font-size: 1.2em;
+    }
+    .over-lay .edit-window .edit-note {
+      height: 40%;
+    }
+
+    .over-lay .edit-window .edit-note input,
+    .over-lay .edit-window .edit-note textarea{
+      padding: 1px;
+      font-size: 0.8em;
     }
     .over-lay .edit-window{
       left: 20%;
       top: 18%;
-      width: 62%;
+      width: 58%;
       height: 35%;
     }
+    .over-lay .edit-window .edit-btn .icon{
+      font-size: 1.3em;
+    }
   }
+
+  @media screen and (max-width: 300px) {
+    header h1{
+      position: relative;
+      left: -20px;
+      font-size: 1.2em;
+    }
+    .user-img{
+      right: -38px;
+      top: -15%;
+      width: 40px;
+      height: 40px;
+    }
+    .container{
+      right: -45px;
+      top: 43px;
+    }
+    .user-btn{
+      width: 120px;
+      height: 15px;
+    }
+    p{
+      font-size: 0.8em;
+      top: -5%;
+    }
+    .container .icon-btn{
+      font-size: 0.9rem;
+    }
+    .create-note{
+      width: 160px;
+      /* left: 1%; */
+    }
+    .create-note input, .create-note textarea{
+      padding-left: 2px;
+      padding-top: 0px;
+      font-size: 0.85em;
+    }
+       .create-note .add-btn{
+      width: 20px;
+      height: 20px;
+    }
+    .create-note .add{
+      font-size: 1.1em;
+    }
+
+    .note{
+      width: 150px;
+      
+    }
+    .note h1{
+      font-size: 0.8em;
+    }
+    .note p{
+      font-size: 0.95em;
+    }
+    
+    .icon-btn{
+      top: -23%;
+    }
+    footer{
+      bottom: -140px;
+    }
+
+    .note .note-icon{
+      font-size: 1.3em;
+    }
+    .note button {
+      width: 25px;
+      height: 25px;
+    }
+
+    .over-lay .edit-window h1{
+      font-size: 1.1em;
+    }
+    .over-lay .edit-window .edit-note {
+      margin: 35px auto 15px auto;
+      padding: 6px;
+      height: 40%;
+    }
+    .over-lay .edit-window .edit-note input,
+    .over-lay .edit-window .edit-note textarea{
+      padding: 0px;
+      font-size: 0.7em;
+    }
+
+    .over-lay .edit-window{
+      left: 20%;
+      top: 18%;
+      width: 60%;
+      height: 25%;
+    }
+    .over-lay .edit-window .edit-btn .icon{
+      font-size: 1em;
+    }
+
+  }
+
+  
+  
 
   
 
