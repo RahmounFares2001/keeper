@@ -33,19 +33,19 @@ function Edit(props) {
             value={content}
             name="contents"
             placeholder="Take a note..."
-            rows="3"
+            rows="2"
             onChange={(e) => setContent(e.target.value)}
           />
         </form>
 
         {/* edit button  */}
         <button className="edit-btn edit" onClick={handleEditBtn}>
-          <DoneAllIcon />
+          <DoneAllIcon className="icon" />
         </button>
 
         {/* close button  */}
         <button className="edit-btn close" onClick={handleCloseBtn}>
-          <CloseIcon />
+          <CloseIcon className="icon" />
         </button>
       </div>
     </div>
