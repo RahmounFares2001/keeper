@@ -173,7 +173,7 @@
     background-color: #ca9b18;
     background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
     width: 44%;
-    height: 55%;
+    height: 350px;
     position: absolute;
     top: 15%;
     left: 27%;
@@ -275,7 +275,7 @@
       height: 33px;
     }
     .over-lay .edit-window{
-      height: 50%;
+      height: 300px;
     }
     .over-lay .edit-window h1{
       font-size: 1.6em;
@@ -391,7 +391,7 @@
 
     .over-lay .edit-window{
       width: 52%;
-      height: 45%;
+      height: 260px;
     }
     .over-lay .edit-window .edit-btn .icon{
       font-size: 1.5em;
@@ -494,7 +494,7 @@
       left: 20%;
       top: 18%;
       width: 58%;
-      height: 35%;
+      height: 210px;
     }
     .over-lay .edit-window .edit-btn .icon{
       font-size: 1.3em;
@@ -572,7 +572,7 @@
     }
 
     .over-lay .edit-window h1{
-      font-size: 1.1em;
+      font-size: 0.9em;
     }
     .over-lay .edit-window .edit-note {
       margin: 35px auto 15px auto;
@@ -589,7 +589,7 @@
       left: 20%;
       top: 18%;
       width: 60%;
-      height: 25%;
+      height: 140px;
     }
     .over-lay .edit-window .edit-btn .icon{
       font-size: 1em;
