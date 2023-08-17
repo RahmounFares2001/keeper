@@ -1,24 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./Header";
 import Note from "./Note";
 import Footer from "./Footer";
 import CreateArea from "./CreateArea";
 import Edit from "./Edit";
 
+
 function App() {
+
   const [notes, setNotes] = useState([]);
 
+  // search
+  // const [search, setsearch] = useState("");
+  // const [result, setResult] = useState("");
 
   // edit notes
   const [isEdit, setEdit] = useState(false);
 
-  const [editNoteId, setEditNoteId] = useState(null);
+  const [editId, setEditId ] = useState(null);
   const [editTitle, setEditTitle] = useState("");
   const [editContent, setEditContent] = useState("");
 
 
-
-  //
 
   function addNote(note) {
     setNotes((prevNotes) => {
@@ -33,55 +36,43 @@ function App() {
       });
     });
   }
-
+  
   function handleEdit(id, title, content) {
-    setEdit(!isEdit);
-
-
-    console.log("edit", editTitle, editContent); // Check values
-
-    setEditNoteId(id);
+    setEditId(id);
     setEditTitle(title);
     setEditContent(content);
 
-   
-  }
-  // on window
-
-  // Edit function comming soon 
-  function handleEditBtn(id, title, content) {
-   
-
-  console.log("editBtn", editTitle, editContent); // Check values
-  
-  setNotes((prevNotes) =>{
-    return ( prevNotes.map((noteItem, index) =>
-          index === editNoteId ?
-          { ...noteItem,
-             title: editTitle,
-              content: editContent } : noteItem
-        ))
-  }
-
-);
-  
-
-  // function handleEditBtn() {
-  //     setNotes((prevNotes) =>
-  //     prevNotes.map((noteItem, index) =>
-  //       index === editNoteId ?
-  //       { ...noteItem,
-  //          title: editTitle,
-  //           content: editContent } : noteItem
-  //     )
-  //   );
-
     setEdit(!isEdit);
   }
 
+  
+  // on window
+  function handleEditBtn(ide, titlee, contente) {
+
+    setNotes((prevNotes) =>{
+      return ( 
+        prevNotes.map((noteItem, index) =>
+            index === ide ?
+            { ...noteItem,
+              title: titlee,
+                content: contente } : noteItem
+          ))
+    });
+    setEdit(!isEdit);
+
+  };
+  
   function handleCloseBtn() {
     setEdit(!isEdit);
+
   }
+
+  // useEffect(() => {
+  //   notes.filter((noteItem) => {
+  //     return search.toLowerCase() === "" ? noteItem : noteItem.title.toLowerCase().includes(search)
+  //   })});
+
+  
 
   return (
     <div>
@@ -89,9 +80,16 @@ function App() {
 
       {isEdit ? null : <CreateArea onAdd={addNote} />}
 
+      {/* <input
+          onChange={(e) => setsearch(e.target.value)}
+          type="text"
+          placeholder="Search by title"
+      ></input> */}
+
       {isEdit
-        ? null
-        : notes.map((noteItem, index) => {
+        ? null : 
+        
+        notes.map((noteItem, index) => {
             return (
               <Note
                 key={index}
@@ -102,31 +100,30 @@ function App() {
                 onEdit={handleEdit}
               />
             );
-          })}
-
-   
+          })}    
 
       {isEdit && (
         notes.map((noteItem, index) => {
-          return(
-            <Edit
+          return( 
+             <Edit
               key={index}
-              id={index}
-              title={noteItem.title}
-              content={noteItem.content}
+              id={editId}
+              title={editTitle}
+              content={editContent}
               onEditBtn={handleEditBtn}
               onDeleteBtn={handleCloseBtn}
+
           />
 
           )
         }) 
-        
-       
       )}
 
       <Footer />
     </div>
-  );
+  )
 }
 
 export default App;
+
+
