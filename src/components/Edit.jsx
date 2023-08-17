@@ -3,11 +3,14 @@ import DoneAllIcon from "@mui/icons-material/DoneAll";
 import CloseIcon from "@mui/icons-material/Close";
 
 function Edit(props) {
+
+  const [id, setId] = useState(props.id);
   const [title, setTitle] = useState(props.title);
   const [content, setContent] = useState(props.content);
 
-  function handleEditBtn() {
-    props.onEditBtn(props.id, title, content);
+  function handleEditBtn(e) {
+    e.preventDefault();
+    props.onEditBtn(id, title, content);
   }
 
 
@@ -16,12 +19,14 @@ function Edit(props) {
     props.onDeleteBtn(props.id);
   }
 
+
+
   return (
     <div className="over-lay">
       <div className="edit-window">
         <h1>Edit Note</h1>
 
-        <form className="edit-note">
+        <form className="edit-note" >
           <input
             value={title}
             name="titles"
@@ -37,6 +42,7 @@ function Edit(props) {
             onChange={(e) => setContent(e.target.value)}
           />
         </form>
+
 
         {/* edit button  */}
         <button className="edit-btn edit" onClick={handleEditBtn}>
