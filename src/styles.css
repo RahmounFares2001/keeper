@@ -1,3 +1,22 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+
 * {
     padding: 0px;
     margin: 0px;
@@ -18,8 +37,9 @@
     /* margin: auto -16px; */
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
     cursor: pointer;
-  }
 
+    animation: fadeIn 1s ease-in-out;
+  }
 
 
   header h1 {
@@ -95,6 +115,12 @@
     margin: 16px;
     border-radius: 5px;
     float: left;
+
+    animation: slideIn 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+  }
+  .note:hover{
+    transform: scale(1.05);
   }
   .note h1 {
     font-size: 1.15em;
@@ -140,6 +166,8 @@
     padding: 15px;
     margin: 30px auto 20px auto;
     border-radius: 5px;
+
+    animation: fadeIn 1s ease-in-out;
   }
   .create-note input,
   .create-note textarea {
@@ -174,7 +202,10 @@
     right: 0;
     position: fixed;
     background-color: rgba(68, 61, 56, 0.548);
+
+    animation: fadeIn 0.5s ease-in-out;
   }
+  
   
   .over-lay .edit-window {
     background-color: #ca9b18;
@@ -186,6 +217,8 @@
     left: 27%;
     border-radius: 6px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+
+    animation: slideIn 0.5s ease-in-out;
   }
   
   .over-lay .edit-window .edit-note {
